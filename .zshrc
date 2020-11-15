@@ -19,8 +19,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew bundler git osx vscode z zsh_reload)
-# interestingPlugins=(xcode)
+plugins=(git z zsh_reload)
+# interestingPlugins=(brew bundler vscode xcode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -51,38 +51,25 @@ fi
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# TODO: clean up aliases and plugins
-# Example aliases
-# https://github.com/kevinpapst/dotfiles/blob/master/.bash_aliases
-# alias zshrc="code ~/.zshrc"
-# alias bundle!="bundle install && rake install"
-# alias be="bundle exec"
-# alias bi="bundle install"
-# alias bu="bundle update"
-# alias ri="rake install"
-# alias gc="git checkout"
-# alias gco="git checkout"
-# alias gcm="git checkout master"
-# alias gpull="git pull"
-# alias gpush="git push"
-# alias gbranch="git checkout -b"
-# alias gclone="git clone"
-# alias g="gittower ."
-# alias s="code ."
-# alias o="open ."
-# alias server="python -m SimpleHTTPServer"
-# alias kk="source .keys"
-# alias k="up && source .env && cd -"
-# alias r="up && be rubocop -a"
 
-# # Download YouTube videos
-# alias youtube="youtube-dl"
-# alias yt="youtube-dl"
+# Bundler
+alias ba='bundle add'
+alias bck='bundle check'
+alias bcn='bundle clean'
+alias be='bundle exec'
+alias bi='bundle install'
+alias bl='bundle list'
+alias bo='bundle open'
+alias bout='bundle outdated'
+alias bp='bundle package'
+alias bu='bundle update'
 
-# # Compress pngs
-# alias compress_png="pngquant"
-# alias png="pngquant"
+# Shortcuts
+alias s='code .'
+alias o='open .'
+
+# SSH Key
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 
 ########################
 ### Helper functions ###
