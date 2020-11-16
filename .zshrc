@@ -59,14 +59,43 @@ alias bcn='bundle clean'
 alias be='bundle exec'
 alias bi='bundle install'
 alias bl='bundle list'
-alias bo='bundle open'
 alias bout='bundle outdated'
-alias bp='bundle package'
 alias bu='bundle update'
 
 # Shortcuts
 alias s='code .'
 alias o='open .'
+alias d='cd ~/Documents'
+alias dl='cd ~/Downloads'
+alias dt='cd ~/Desktop'
+alias x='cd ~/Xcode'
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Clean up LaunchServices to remove duplicates in the “Open With” menu
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+
+# Get macOS Software Updates, and update installed Ruby gems, Homebrew, and their installed packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo gem update --system; sudo gem update; sudo gem cleanup'
+
+# Get week number
+alias week='date +%V'
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# IP addresses
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias localip='ipconfig getifaddr en0'
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
+alias plistbuddy="/usr/libexec/PlistBuddy"
+
+# Show active network interfaces
+alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
 
 # SSH Key
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
@@ -116,7 +145,7 @@ function openx() {
 }
 
 ####################
-### Powerline10k ###
+### Powerlevel10k ###
 ####################
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
