@@ -52,6 +52,9 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# Run the setup.sh script of the macOS setup repository
+alias setup='cd ~/.macos-setup && sh setup.sh'
+
 # Bundler
 alias ba='bundle add'
 alias bck='bundle check'
@@ -125,6 +128,12 @@ function up() {
   else
     cd $git_dir
   fi
+}
+
+# Add the given email to the local git config
+function git_email() {
+  git config --local --unset user.email
+  git config --local --add user.email "$1"
 }
 
 # Xcode via @orta

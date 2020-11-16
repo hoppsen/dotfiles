@@ -4,3 +4,5 @@
 	textconv = "iconv -f utf-16 -t utf-8"
 [credential]
 	helper = osxkeychain
+[user]
+	name = Marcel Hoppe
