@@ -1,7 +1,9 @@
 ## Git
 **/*.orig
 
-# Taken from: https://github.com/github/gitignore/blob/master/Global/macOS.gitignore
+##########################################################################################
+### Taken from: https://github.com/github/gitignore/blob/master/Global/macOS.gitignore ###
+##########################################################################################
 
 # General
 .DS_Store
@@ -30,7 +32,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Taken from: https://github.com/github/gitignore/blob/master/Swift.gitignore
+###################################################################################
+### Taken from: https://github.com/github/gitignore/blob/master/Swift.gitignore ###
+###################################################################################
 
 # Xcode
 #
