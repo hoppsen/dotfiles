@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/marcel.hoppe/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [diff "localizablestrings"]
 	textconv = "iconv -f utf-16 -t utf-8"
 [credential]
