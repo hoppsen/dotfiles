@@ -66,6 +66,10 @@ alias bl='bundle list'
 alias bout='bundle outdated'
 alias bu='bundle update'
 
+# Bundler + X
+alias bef='bundle exec fastlane'
+alias bep='bundle exec pod'
+
 # Shortcuts
 alias s='code .'
 alias o='open .'
