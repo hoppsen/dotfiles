@@ -6,3 +6,5 @@
 	helper = osxkeychain
 [user]
 	name = Marcel Hoppe
+[pull]
+	rebase = false

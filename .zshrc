@@ -76,7 +76,7 @@ alias o='open .'
 alias d='cd ~/Documents'
 alias dl='cd ~/Downloads'
 alias dt='cd ~/Desktop'
-alias x='cd ~/Xcode'
+alias x='cd ~/Developer'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
